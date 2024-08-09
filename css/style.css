@@ -1,3 +1,6 @@
+* {
+    font-family: "Palanquin Dark", sans-serif;
+}
 body {
     background-color: #eee;
 }
@@ -43,13 +46,13 @@ aside {
 
 .button {
     height: 30px;
-    background-color: aquamarine;
+    background-color: aqua;
     border: none;
     border-radius: 7px;
 }
 
 .bg-consmilk {
-    background-color: aquamarine;
+    background-color: aqua;
 }
 
 .bg-reset {
