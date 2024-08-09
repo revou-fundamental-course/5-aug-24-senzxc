@@ -1,0 +1,41 @@
+.main-title{
+    text-align: center;
+}
+
+main{
+    display: flex;
+}
+
+form{
+    padding: 12px;
+    background-color: #eee;
+}
+
+aside{
+    padding: 48px;
+}
+
+.button{
+    height: 30px;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 7px;
+}
+
+.bg-consmilk{
+    background-color: aquamarine;
+}
+
+.bg-reset{
+    background-color: red;
+    color: white;
+}
+
+.btn-form{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+footer{
+    text-align: center;
+}
