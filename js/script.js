@@ -14,7 +14,7 @@ function calc() {
         p.push("female");
     }
 
-    var bmi = Number(p[2])/(Number(p[1])/100*Number(p[1])/100);
+    var bmi = Number(p[0])/(Number(p[1])/100*Number(p[1])/100);
 
     var result = '';
     if (bmi < 18.5) {
