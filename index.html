@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;500;600;700&family=Tauri&display=swap" rel="stylesheet">
+    <title>Kalkulator BMI</title>
     <link rel="stylesheet" href="css\style.css">
 </head>
 <body>
@@ -22,32 +19,32 @@
                 <p>Temukan cara mudah dan cepat untuk memantau kesehatan Kamu dengan kalkulator BMI kami yang interaktif. Cukup masukkan data berat dan tinggi badan Kamu, dan biarkan alat canggih kami menghitung Indeks Massa Tubuh Kamu dengan akurat. Untuk ambil langkah pertama menuju gaya hidup yang lebih sehat, yuk, hitung sekarang di kalkulator BMI berikut."</p>
             </article>
     
-            <form action="">
+            <div class="form">
                 <div class="radio-form">
                     <h3>Jenis Kelamin &nbsp; :</h3>
 
-                    <input type="radio" id="laki-laki" name="jenis-kelamin">
-                    <label class="lbl-radio" for="laki-laki">Laki-laki</label>
+                    <input type="radio" id="male" name="jenis-kelamin" required>
+                    <label class="lbl-radio" for="male">Laki-laki</label>
 
                     <label class="lbl-slash">/</label>
 
-                    <input type="radio" id="perempuan" name="jenis-kelamin">
-                    <label class="lbl-radio" for="perempuan">Perempuan</label>
+                    <input type="radio" id="female" name="jenis-kelamin" required>
+                    <label class="lbl-radio" for="female">Perempuan</label>
                 </div>
     
                 <div class="input-form">
-                    <input type="number" placeholder="Masukkan Berat Badan (kg)">
+                    <input type="number" id="weight" placeholder="Masukkan Berat Badan (kg)" required>
 
-                    <input type="number" placeholder="Masukkan Tinggi Badan (cm)">
+                    <input type="number" id="height" placeholder="Masukkan Tinggi Badan (cm)" required>
 
-                    <input type="number" placeholder="Masukkan Usia (tahun)">
+                    <input type="number" id="age" placeholder="Masukkan Usia (tahun)" required>
                 </div>
     
                 <div class="btn-form-l">
-                    <button class="btn-calc">Hitung BMI</button>
-                    <button class="btn-rst">Reset</button>
+                    <button class="btn-calc" id="submit" onclick="calc()">Hitung BMI</button>
+                    <button class="btn-rst" type="reset">Reset</button>
                 </div>
-            </form>
+            </div>
     
             <article>
                 <header>
@@ -72,9 +69,9 @@
                 </header> -->
 
                 <div class="result-form">
-                    <h2>Berat Badan Lebih</h2>
-                    <h1>24.7</h1>
-                    <h3>Anda memiliki berat badan berlebih</h3>
+                    <h2>BMI kamu adalah</h2>
+                    <h1 id="result">00.00</h1>
+                    <h3 class="comment"></h3>
 
                     <div class="btn-form-r">
                         <button>Download Hasil BMI</button>
@@ -114,5 +111,8 @@
     <footer>
         <h3>&copy 2024 by senzxc</h3>
     </footer>
+
+    <script src="js/script.js"></script>
+
 </body>
 </html>
