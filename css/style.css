@@ -10,12 +10,13 @@ body {
 
 main {
     display: flex;
+    justify-content: space-between;
 }
 
 .left-flex form {
     padding: 12px;
-    background-color: white;
-    border-radius: 7px;
+    background-color: #eee;
+    border-radius: 10px;
 }
 
 .left-flex .input-form input[type=number] {
@@ -26,7 +27,6 @@ main {
     border: 1px solid #ccc;
     border-radius: 7px;
     box-sizing: border-box;
-    background: transparent;
     outline: none;
     transition: .3s;
 }
@@ -48,8 +48,8 @@ main {
     width: 70px;
     border-radius: 7px;
     padding: 5px;
-    border: none;
-    background-color: #eee;
+    border: 1px solid #ccc;
+    background-color: white;
 }
 
 .left-flex .btn-form-l {
@@ -63,7 +63,10 @@ aside {
 
 aside.left-flex,
 aside.right-flex {
-    width: 100%;
+    width: 90%;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: white;
 }
 
 .right-flex .result-form {
@@ -96,6 +99,11 @@ aside.right-flex {
 .right-flex .result-form .btn-form-r button {
     width: 170px;
     padding: 3px;
+    border: none;
+    border-radius: 7px;
+    padding: 5px;
+    background-color: #eca1a6;
+    color: white;
 }
 
 footer {
