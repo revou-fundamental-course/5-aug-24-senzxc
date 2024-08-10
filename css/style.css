@@ -1,10 +1,14 @@
 * {
-    font-family: "Palanquin Dark", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 body {
     background-color: #eee;
 }
 .main-title {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px 10px 10px 10px;
     text-align: center;
 }
 
@@ -17,7 +21,7 @@ p {
     text-align: justify;
 }
 
-.left-flex form {
+.left-flex .form {
     padding: 12px;
     background-color: #eee;
     border-radius: 10px;
@@ -80,6 +84,7 @@ p {
     border-radius: 7px;
     box-sizing: border-box;
     outline: none;
+    font-family: "Nunito", sans-serif;
     transition: .3s;
 }
 
@@ -97,18 +102,20 @@ p {
 .left-flex .btn-form-l .btn-calc{
     width: 100px;
     border-radius: 7px;
-    padding: 5px;
+    padding: 6px;
     border: none;
     background-color: #eca1a6;
     color: white;
+    cursor: pointer;
 }
 
 .left-flex .btn-form-l .btn-rst{
     width: 70px;
     border-radius: 7px;
-    padding: 5px;
+    padding: 6px;
     border: 1px solid #ccc;
     background-color: white;
+    cursor: pointer;
 }
 
 aside {
@@ -144,37 +151,53 @@ aside.right-flex {
     text-align: center;
 }
 
+.comment {
+    display: none;
+    border: dashed 1px;
+    border-radius: 7px;
+    padding: 5px;
+    margin-top: 0;
+}
+
+#comment {
+    color: #eca1a6;
+    font-weight: 800;
+}
+
 .right-flex .result-form .btn-form-r {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .right-flex .result-form .btn-form-r button {
     width: 170px;
     border: none;
     border-radius: 7px;
-    padding: 5px;
+    padding: 6px;
     background-color: #eca1a6;
     color: white;
+    cursor: pointer;
 }
 
 .right-flex .btn-consult {
     width: 220px;
     border: none;
     border-radius: 7px;
-    padding: 6px;
+    padding: 7px;
     background-color: #eca1a6;
     color: white;
+    cursor: pointer;
 }
 
 .right-flex .btn-regis {
     width: 190px;
     border: none;
     border-radius: 7px;
-    padding: 6px;
+    padding: 7px;
     background-color: #eca1a6;
     color: white;
+    cursor: pointer;
 }
 
 .right-flex .sugest-form {
@@ -190,7 +213,7 @@ aside.right-flex {
 
 .right-flex .sugest-form ul {
     list-style: none;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     margin-top: 10px;
 }
 
@@ -199,5 +222,9 @@ aside.right-flex {
 }
 
 footer {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
     text-align: center;
 }
