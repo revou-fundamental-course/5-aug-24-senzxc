@@ -5,7 +5,25 @@ var male = document.getElementById("male");
 var female = document.getElementById("female");
 let resultText = document.querySelector(".comment");
 
+modalContent = document.querySelector(".modal-content");
+modalText = document.querySelector("#modalText");
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+
+function calculate(){
+ 
+    if(age.value=='' || height.value=='' || weight.value=='' || (male.checked==false && female.checked==false)){
+      modal.style.display = "block";
+      modalText.innerHTML = `All fields are required!`;
+  
+    }else{
+      countBmi();
+    }
+  
+  }
+
 function calc() {
+
     var p = [weight.value, height.value, age.value];
     if (male.checked) {
         p.push("male");
@@ -38,3 +56,16 @@ function calc() {
     document.querySelector(".comment").innerHTML = `Kamu <span id="comment">${result}</span>`;
     document.querySelector("#result").innerHTML = bmi.toFixed(2);
 }
+
+// Jika klik <span> (x), tutup popup
+span.onclick = function() {
+    modal.style.display = "none";
+}
+  
+// Jika klik dimanapun diluar popup, tutup popup
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+  
