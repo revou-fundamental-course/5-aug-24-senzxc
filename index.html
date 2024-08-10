@@ -19,32 +19,32 @@
                 <p>Temukan cara mudah dan cepat untuk memantau kesehatan Kamu dengan kalkulator BMI kami yang interaktif. Cukup masukkan data berat dan tinggi badan Kamu, dan biarkan alat canggih kami menghitung Indeks Massa Tubuh Kamu dengan akurat. Untuk ambil langkah pertama menuju gaya hidup yang lebih sehat, yuk, hitung sekarang di kalkulator BMI berikut."</p>
             </article>
     
-            <div class="form">
+            <form id="bmi-form">
                 <div class="radio-form">
                     <h3>Jenis Kelamin &nbsp; :</h3>
 
-                    <input type="radio" id="male" name="jenis-kelamin" required>
+                    <input type="radio" id="male" name="gender" required>
                     <label class="lbl-radio" for="male">Laki-laki</label>
 
                     <label class="lbl-slash">/</label>
 
-                    <input type="radio" id="female" name="jenis-kelamin" required>
+                    <input type="radio" id="female" name="gender" required>
                     <label class="lbl-radio" for="female">Perempuan</label>
                 </div>
     
                 <div class="input-form">
-                    <input type="number" id="weight" placeholder="Masukkan Berat Badan (kg)" required>
-
                     <input type="number" id="height" placeholder="Masukkan Tinggi Badan (cm)" required>
+                    
+                    <input type="number" id="weight" placeholder="Masukkan Berat Badan (kg)" required>
 
                     <input type="number" id="age" placeholder="Masukkan Usia (tahun)" required>
                 </div>
     
                 <div class="btn-form-l">
-                    <button class="btn-calc" id="submit" onclick="calc()">Hitung BMI</button>
+                    <button class="btn-calc" type="button" id="submit" onclick="calc()">Hitung BMI</button>
                     <button class="btn-rst" type="reset">Reset</button>
                 </div>
-            </div>
+            </form>
     
             <article>
                 <header>
