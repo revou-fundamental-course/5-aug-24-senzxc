@@ -12,13 +12,13 @@ main {
     display: flex;
 }
 
-form {
+.left-flex form {
     padding: 12px;
     background-color: white;
     border-radius: 10px;
 }
 
-.input-form input[type=number] {
+.left-flex .input-form input[type=number] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -31,12 +31,12 @@ form {
     transition: .3s;
 }
 
-.input-form input[type=number]:focus {
+.left-flex .input-form input[type=number]:focus {
     border-color: aqua;
     box-shadow: 0 0 8px 0 aqua;
 }
 
-.input-form input[type=number]:focus + img {
+.left-flex .input-form input[type=number]:focus + img {
     color: aqua;
 }
 
@@ -49,55 +49,39 @@ aside.right-flex {
     width: 100%;
 }
 
-.button {
-    height: 30px;
-    background-color: aqua;
-    border: none;
-    border-radius: 7px;
+.left-flex .btn-form {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.bg-consmilk {
-    background-color: aqua;
-}
-
-.bg-reset {
-    background-color: red;
-    color: white;
-}
-
-.btn-form {
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.result-form {
+.right-flex .result-form {
     background-color: white;
     padding: 12px;
     border-radius: 10px;
 }
 
-.result-form h2 {
+.right-flex .result-form h2 {
     text-align: center;
     margin: 0;
 }
 
-.result-form h1 {
+.right-flex .result-form h1 {
     text-align: center;
     font-size: 3rem;
     margin: 0;
 }
 
-.result-form h3 {
+.right-flex .result-form h3 {
     text-align: center;
 }
 
-.result-form .btn-container {
+.right-flex .result-form .btn-container {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
-.result-form .btn-container button {
-    margin-bottom: 20px;
+.right-flex .result-form .btn-container button {
     width: 170px;
     padding: 3px;
 }
