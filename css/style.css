@@ -13,6 +13,10 @@ main {
     justify-content: space-between;
 }
 
+p {
+    text-align: justify;
+}
+
 .left-flex form {
     padding: 12px;
     background-color: #eee;
@@ -25,6 +29,42 @@ main {
 
 .left-flex .radio-form h3 {
     margin: 10px;
+}
+
+.left-flex .radio-form {
+    display: flex;
+    align-items: center;
+}
+
+.left-flex .radio-form input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.left-flex .radio-form .lbl-radio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    width: 100px;
+    padding: 5px;
+    border: 1px solid #eca1a6;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.25, 0.25, 0.5, 1.9);
+}
+
+.left-flex .radio-form input[type=radio]:checked + .lbl-radio {
+    width: 100px;
+    background-color: #eca1a6;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    justify-content: center;
+}
+
+.left-flex .radio-form .lbl-slash {
+    margin-left: 10px;
 }
 
 .left-flex .input-form {
