@@ -20,7 +20,7 @@ body {
 
 .logo-header{
 	position: absolute;
-	top: 40%;
+	top: 45%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: #D9DCD6;
@@ -273,6 +273,10 @@ aside.right-flex {
     display: block;
 }
 
+#result-bmi-span {
+    color: #eca1a6;
+}
+
 .right-flex .result-article {
     display: none;
 }
@@ -308,6 +312,22 @@ aside.right-flex {
     border-radius: 10px;
     text-align: center;
     padding: 12px;
+}
+
+.right-flex .sugest-low {
+    display: none;
+}
+
+.right-flex .sugest-mid {
+    display: none;
+}
+
+.right-flex .sugest-high {
+    display: none;
+}
+
+.right-flex .sugest-veryhigh {
+    display: none;
 }
 
 .right-flex .sugest-form h1 {

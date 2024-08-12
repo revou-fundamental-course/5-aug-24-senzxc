@@ -37,6 +37,11 @@ let resultText = document.querySelector(".comment");
 let dlBtnResult = document.querySelector(".dl-btn-bmi");
 let resultArticle = document.querySelector(".result-article");
 let textInfo = document.querySelector(".text-info");
+let resltBmiSpan = document.querySelector(".result-bmi-span");
+let sugestLow = document.querySelector(".sugest-low");
+let sugestMid = document.querySelector(".sugest-mid");
+let sugestHigh = document.querySelector(".sugest-high");
+let sugestVeryHigh = document.querySelector(".sugest-veryhigh");
 
 function calculate(){
  
@@ -65,26 +70,48 @@ function calcBmi() {
     var result = '';
     if (bmi < 18.5) {
         result = 'Kekurangan berat badan';
+        sugestLow.style.display = "block";
+        sugestMid.style.display = "none";
+        sugestHigh.style.display = "none";
+        sugestVeryHigh.style.display = "none";
     }
     else if (18.5 <= bmi && bmi <= 24.9) {
         result = 'Ideal';
+        sugestLow.style.display = "none";
+        sugestMid.style.display = "block";
+        sugestHigh.style.display = "none";
+        sugestVeryHigh.style.display = "none";
     }
     else if (25 <= bmi && bmi <= 29.9) {
         result = 'Berlebihan berat badan';
+        sugestLow.style.display = "none";
+        sugestMid.style.display = "none";
+        sugestHigh.style.display = "block";
+        sugestVeryHigh.style.display = "none";
     }
     else if (30 <= bmi && bmi <= 34.9) {
         result = 'Obesitas';
+        sugestLow.style.display = "none";
+        sugestMid.style.display = "none";
+        sugestHigh.style.display = "none";
+        sugestVeryHigh.style.display = "block";
     }
     else if (35 <= bmi) {
         result = 'Obesitas Ekstrim';
+        sugestLow.style.display = "none";
+        sugestMid.style.display = "none";
+        sugestHigh.style.display = "none";
+        sugestVeryHigh.style.display = "block";
     }
 
     
+    textInfo.style.display = "none";
     resultText.style.display = "block";
     dlBtnResult.style.display = "block";
     resultArticle.style.display = "block";
-    textInfo.style.display = "none";
+    
     document.querySelector(".comment").innerHTML = `Kamu <span id="comment">${result}</span>`;
+    document.querySelector(".result-bmi-span").innerHTML = `Hasil BMI kamu : <span id="result-bmi-span">${bmi.toFixed(2)}</span>`;
     document.querySelector("#result").innerHTML = bmi.toFixed(2);
 }
 
