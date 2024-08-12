@@ -14,7 +14,7 @@ body {
 	top: 0%;
 	width: 100%;
 	height: 100vh;
-	background-color: #582238;
+	background-color: #bb5f65;
 	transition: 1s;
 }
 
@@ -227,7 +227,6 @@ aside.right-flex {
     text-align: center;
     font-size: 3rem;
     margin: 0;
-    color: ;
 }
 
 .right-flex .result-form h3 {
@@ -320,6 +319,12 @@ aside.right-flex {
 
 .right-flex .sugest-mid {
     display: none;
+}
+
+.right-flex .sugest-mid h1 {
+    margin-bottom: 20px;
+    margin-top: 0;
+    padding: 0 0 20px
 }
 
 .right-flex .sugest-high {
