@@ -14,6 +14,7 @@ body {
     animation: fade-in-title 0.5s ease-in;
 }
 
+/* Animation for .main-title */
 @keyframes fade-in-title {
     0% {
         opacity: 0;
@@ -31,6 +32,7 @@ main {
     animation: fade-in-main 0.5s;
 }
 
+/* Animation for main */
 @keyframes fade-in-main {
     0% {
         opacity: 0;
@@ -282,6 +284,7 @@ footer {
     animation: fade-in-footer 0.5s ease-in;
 }
 
+/* Animation for footer */
 @keyframes fade-in-footer {
     0% {
         opacity: 0;
