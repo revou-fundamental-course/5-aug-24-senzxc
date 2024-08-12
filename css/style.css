@@ -147,13 +147,17 @@ p {
     margin: 0 10px;
 }
 
+.left-flex .input-group {
+    display: flex;
+}
+
 .left-flex .input-form input[type=number] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
-    border-radius: 7px;
+    border-radius: 7px 0 0 7px;
     box-sizing: border-box;
     outline: none;
     font-family: "Nunito", sans-serif;
@@ -163,6 +167,18 @@ p {
 .left-flex .input-form input[type=number]:focus {
     border-color: #eca1a6;
     box-shadow: 0 0 8px 0 #eca1a6;
+}
+
+.left-flex .span-input-group {
+    display: flex;
+    background-color: #eca1a6;
+    padding: 10px;
+    border-radius: 0 7px 7px 0;
+    margin: 8px 0;
+    align-items: center;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: white;
 }
 
 .left-flex .btn-form-l {
@@ -311,6 +327,10 @@ aside.right-flex {
     border-radius: 10px;
     text-align: center;
     padding: 12px;
+}
+
+.right-flex .sugest-form ul {
+    padding: 0;
 }
 
 .right-flex .sugest-low {

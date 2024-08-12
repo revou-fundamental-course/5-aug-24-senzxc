@@ -75,6 +75,7 @@ function calcBmi() {
         sugestMid.style.display = "none";
         sugestHigh.style.display = "none";
         sugestVeryHigh.style.display = "none";
+        document.querySelector(".result-bmi-span").innerHTML = `Hasil BMI kamu dibawah <span id="result-bmi-span">18.5</span>`;
         document.querySelector(".sugest-text").innerHTML = `Hasil BMI Kamu menunjukkan bahwa Kamu berada dalam kategori kekurangan berat badan. Penting untuk memperhatikan asupan nutrisi dan berkonsultasi dengan ahli gizi untuk mencapai berat badan yang sehat.`;
     }
     else if (18.5 <= bmi && bmi <= 24.9) {
@@ -83,6 +84,7 @@ function calcBmi() {
         sugestMid.style.display = "block";
         sugestHigh.style.display = "none";
         sugestVeryHigh.style.display = "none";
+        document.querySelector(".result-bmi-span").innerHTML = `Hasil BMI kamu diantara <span id="result-bmi-span">18.5</span> dan <span id="result-bmi-span">24.9</span>`;
         document.querySelector(".sugest-text").innerHTML = `Hasil BMI Kamu berada dalam kategori berat badan ideal. Tetap penting untuk menjaga pola makan seimbang dan rutinitas olahraga.`;
     }
     else if (25 <= bmi && bmi <= 29.9) {
@@ -91,6 +93,7 @@ function calcBmi() {
         sugestMid.style.display = "none";
         sugestHigh.style.display = "block";
         sugestVeryHigh.style.display = "none";
+        document.querySelector(".result-bmi-span").innerHTML = `Hasil BMI kamu diantara <span id="result-bmi-span">25</span> dan <span id="result-bmi-span">29.9</span>`;
         document.querySelector(".sugest-text").innerHTML = `Hasil BMI Kamu menunjukkan bahwa Kamu berada dalam kategori kelebihan berat badan. Meski belum mencapai tingkat obesitas, penting untuk mempertimbangkan perubahan gaya hidup sehat untuk mencegah risiko kesehatan lebih lanjut.`;
     }
     else if (30 <= bmi && bmi <= 34.9) {
@@ -99,6 +102,7 @@ function calcBmi() {
         sugestMid.style.display = "none";
         sugestHigh.style.display = "none";
         sugestVeryHigh.style.display = "block";
+        document.querySelector(".result-bmi-span").innerHTML = `Hasil BMI kamu diantara <span id="result-bmi-span">30</span> dan <span id="result-bmi-span">34.9</span>`;
         document.querySelector(".sugest-text").innerHTML = `Hasil BMI Kamu menunjukkan bahwa Kamu berada dalam kategori obesitas. Disarankan untuk berkonsultasi dengan dokter atau ahli gizi untuk mengatur pola makan dan aktivitas fisik guna mencapai berat badan yang lebih sehat.`;
     }
     else if (35 <= bmi) {
@@ -107,6 +111,7 @@ function calcBmi() {
         sugestMid.style.display = "none";
         sugestHigh.style.display = "none";
         sugestVeryHigh.style.display = "block";
+        document.querySelector(".result-bmi-span").innerHTML = `Hasil BMI kamu diatas <span id="result-bmi-span">35</span>`;
         document.querySelector(".sugest-text").innerHTML = `Hasil BMI Kamu menunjukkan bahwa Kamu berada dalam kategori obesitas ekstrim. Kondisi ini sangat berisiko dan memerlukan perhatian medis segera. Disarankan untuk berkonsultasi dengan dokter untuk rencana penurunan berat badan yang aman dan efektif.`;
     }
 
@@ -117,7 +122,6 @@ function calcBmi() {
     resultArticle.style.display = "block";
     
     document.querySelector(".comment").innerHTML = `Kamu <span id="comment">${result}</span>`;
-    document.querySelector(".result-bmi-span").innerHTML = `Hasil BMI kamu : <span id="result-bmi-span">${bmi.toFixed(2)}</span>`;
     document.querySelector("#result").innerHTML = bmi.toFixed(2);
 }
 
