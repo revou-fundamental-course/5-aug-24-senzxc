@@ -5,24 +5,24 @@ var male = document.getElementById("male");
 var female = document.getElementById("female");
 let resultText = document.querySelector(".comment");
 
-modalContent = document.querySelector(".modal-content");
-modalText = document.querySelector("#modalText");
-var modal = document.getElementById("myModal");
+popupContent = document.querySelector(".popup-content");
+popupText = document.querySelector("#popupText");
+var popup = document.getElementById("mypopup");
 var span = document.getElementsByClassName("close")[0];
 
 function calculate(){
  
     if(age.value=='' || height.value=='' || weight.value=='' || (male.checked==false && female.checked==false)){
-      modal.style.display = "block";
-      modalText.innerHTML = `All fields are required!`;
+      popup.style.display = "block";
+      popupText.innerHTML = `Harap isi semua kolom!`;
   
     }else{
-      countBmi();
+      calcBmi();
     }
   
   }
 
-function calc() {
+function calcBmi() {
 
     var p = [weight.value, height.value, age.value];
     if (male.checked) {
@@ -48,7 +48,7 @@ function calc() {
         result = 'Obesitas';
     }
     else if (35 <= bmi) {
-        result = 'Obesitas brutal';
+        result = 'Obesitas Ekstrim';
     }
 
     
@@ -59,13 +59,13 @@ function calc() {
 
 // Jika klik <span> (x), tutup popup
 span.onclick = function() {
-    modal.style.display = "none";
+    popup.style.display = "none";
 }
   
 // Jika klik dimanapun diluar popup, tutup popup
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    if (event.target == popup) {
+        popup.style.display = "none";
     }
 }
   
