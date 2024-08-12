@@ -4,17 +4,42 @@
 body {
     background-color: #eee;
 }
+
 .main-title {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     margin: 10px;
     text-align: center;
+    animation: fade-in-title 0.5s ease-in;
+}
+
+@keyframes fade-in-title {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 main {
     display: flex;
     justify-content: space-between;
+    animation: fade-in-main 0.5s;
+}
+
+@keyframes fade-in-main {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
 }
 
 p {
@@ -107,11 +132,12 @@ p {
 .left-flex .btn-form-l .btn-calc{
     width: 100px;
     border-radius: 7px;
-    padding: 6px;
+    padding: 7px;
     border: none;
     background-color: #eca1a6;
     color: white;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .left-flex .btn-form-l .btn-calc:hover {
@@ -121,10 +147,11 @@ p {
 .left-flex .btn-form-l .btn-rst{
     width: 70px;
     border-radius: 7px;
-    padding: 6px;
+    padding: 7px;
     border: 1px solid #eee;
     background-color: white;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .left-flex .btn-form-l .btn-rst:hover {
@@ -188,10 +215,11 @@ aside.right-flex {
     width: 170px;
     border: none;
     border-radius: 7px;
-    padding: 6px;
+    padding: 7px;
     background-color: #eca1a6;
     color: white;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .right-flex .result-form .btn-form-r button:hover {
@@ -202,20 +230,26 @@ aside.right-flex {
     width: 220px;
     border: none;
     border-radius: 7px;
-    padding: 7px;
+    padding: 8px;
     background-color: #eca1a6;
     color: white;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .right-flex .btn-regis {
     width: 190px;
     border: none;
     border-radius: 7px;
-    padding: 7px;
+    padding: 8px;
     background-color: #eca1a6;
     color: white;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.right-flex button:hover {
+    background-color: #e06377;
 }
 
 .right-flex .sugest-form {
@@ -239,18 +273,27 @@ aside.right-flex {
     margin-bottom: 10px;
 }
 
-.right-flex button:hover {
-    background-color: #e06377;
-}
-
 footer {
     background-color: white;
     padding: 20px;
     margin: 10px;
     border-radius: 10px;
     text-align: center;
+    animation: fade-in-footer 0.5s ease-in;
 }
 
+@keyframes fade-in-footer {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* popup Content */
 .popup {
     display: none;
     position: fixed; 
@@ -267,7 +310,6 @@ footer {
   
   }
   
-  /* popup Content */
   .popup-content {
     background-color: #fefefe;
     margin: auto;
@@ -275,7 +317,7 @@ footer {
     border: 1px solid #888;
     width: 600px;
     border-radius: 10px;
-    box-shadow: #393c76 -1px 2px 2px 1px;
+    box-shadow: rgba(0, 0, 0, 0.4) -1px 2px 2px 1px;
   }
   
   #popupText {
@@ -285,15 +327,7 @@ footer {
     color: rgb(24, 23, 23);
   }
   
-  .popup-wrong {
-  border: 2px solid red;
-  }
-  
-  .popup-correct {
-    border: 2px solid green;
-    }
-  
-  /* The Close Button */
+  /* Tombol tutup */
   .close {
     color: #aaaaaa;
     float: right;
@@ -304,5 +338,5 @@ footer {
   }
   
   .close:hover {
-    color: #d41111; 
+    color: #eca1a6; 
   }
