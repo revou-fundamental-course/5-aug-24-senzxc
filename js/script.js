@@ -34,11 +34,9 @@ var age = document.getElementById("age");
 var male = document.getElementById("male");
 var female = document.getElementById("female");
 let resultText = document.querySelector(".comment");
-
-popupContent = document.querySelector(".popup-content");
-popupText = document.querySelector("#popupText");
-var popup = document.getElementById("mypopup");
-var span = document.getElementsByClassName("close")[0];
+let dlBtnResult = document.querySelector(".dl-btn-bmi");
+let resultArticle = document.querySelector(".result-article");
+let textInfo = document.querySelector(".text-info");
 
 function calculate(){
  
@@ -69,7 +67,7 @@ function calcBmi() {
         result = 'Kekurangan berat badan';
     }
     else if (18.5 <= bmi && bmi <= 24.9) {
-        result = 'Sehat';
+        result = 'Ideal';
     }
     else if (25 <= bmi && bmi <= 29.9) {
         result = 'Berlebihan berat badan';
@@ -83,9 +81,19 @@ function calcBmi() {
 
     
     resultText.style.display = "block";
+    dlBtnResult.style.display = "block";
+    resultArticle.style.display = "block";
+    textInfo.style.display = "none";
     document.querySelector(".comment").innerHTML = `Kamu <span id="comment">${result}</span>`;
     document.querySelector("#result").innerHTML = bmi.toFixed(2);
 }
+
+/* ------------------ POPUP ------------------- */
+
+popupContent = document.querySelector(".popup-content");
+popupText = document.querySelector("#popupText");
+var popup = document.getElementById("mypopup");
+var span = document.getElementsByClassName("close")[0];
 
 // Jika klik <span> (x), tutup popup
 span.onclick = function() {
