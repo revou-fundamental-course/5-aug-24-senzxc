@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
 * {
     font-family: "Poppins", sans-serif;
 }
@@ -86,6 +89,15 @@ main {
 
 p {
     text-align: justify;
+    text-indent: 30px;
+}
+
+.text-info {
+    text-indent: 0;
+}
+
+.result-bmi-span {
+    text-indent: 0;
 }
 
 .left-flex form {
@@ -506,10 +518,25 @@ footer {
 
     .left-flex .radio-form #radio-male {
         margin-left: 0;
+        margin-right: 10px;
+    }
+
+    .left-flex .radio-form .lbl-slash {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
+    .left-flex .radio-form #radio-female {
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .left-flex article {
         margin: 20px;
+    }
+
+    .left-flex article header h2 {
+        font-size: 1.2rem;
     }
 
     .right-flex section {
@@ -517,20 +544,32 @@ footer {
     }
 
     .right-flex .result-form h1 {
-        font-size: 2rem;
+        font-size: 1.7rem;
+    }
+
+    .right-flex .result-form h2 {
+        font-size: 1.3rem;
+    }
+
+    .right-flex .result-form h3 {
+        font-size: 1.2rem;
     }
 
     .right-flex .btn-article-r {
-        line-height: 45px;
+        line-height: 40px;
     }
 
     .right-flex .btn-form-r {
-        line-height: 45px;
+        line-height: 40px;
     }
 
     .right-flex .btn-consult,
     .right-flex .btn-regis {
         width: 100%;
+    }
+
+    .right-flex .sugest-form h1 {
+        font-size: 1.1rem;
     }
 
     footer {
