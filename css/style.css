@@ -603,4 +603,12 @@ footer {
             padding: 5px;
         }
     }
+
+    .popup-content {
+        width: 300px;
+    }
+
+    #popupText {
+        font-size: 0.9rem;
+    }
 }
