@@ -222,7 +222,7 @@ aside {
 
 aside.left-flex,
 aside.right-flex {
-    width: 90%;
+    width: 100%;
     margin: 10px;
     border-radius: 10px;
     background-color: white;
@@ -437,3 +437,62 @@ footer {
   .close:hover {
     color: #eca1a6; 
   }
+
+/* Untuk layar di bawah 768px (Tablet dan ponsel) */
+@media only screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        margin: 0 10px;
+    }
+
+    .left-flex, .right-flex {
+        width: 100%;
+        padding: 0;
+    }
+
+    .left-flex form {
+        margin: 0 40px;
+    }
+
+    .left-flex .btn-form-l {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .left-flex .btn-form-l .btn-calc,
+    .left-flex .btn-form-l .btn-rst {
+        width: 100%;
+    }
+
+    .left-flex article {
+        margin: 40px;
+    }
+
+    .right-flex section {
+        margin: 40px;
+    }
+}
+
+/* Untuk layar di bawah 480px (Ponsel kecil) */
+@media only screen and (max-width: 480px) {
+    .main-title {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+
+    .left-flex .input-form input[type=number],
+    .left-flex .radio-form .lbl-radio {
+        width: 100%;
+    }
+
+    .right-flex .result-form h1 {
+        font-size: 2rem;
+    }
+
+    .right-flex .btn-consult,
+    .right-flex .btn-regis {
+        width: 100%;
+    }
+}
