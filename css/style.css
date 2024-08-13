@@ -491,6 +491,18 @@ footer {
     .right-flex section {
         margin: 40px;
     }
+
+    .popup {
+        padding-top: 350px;
+    }
+
+    .popup-content {
+        width: 450px;
+    }
+
+    #popupText {
+        font-size: 0.9rem;
+    }
 }
 
 /* Untuk layar di bawah 480px (Ponsel kecil) */
@@ -597,11 +609,13 @@ footer {
         font-size: 1.1rem;
     }
 
-    footer {
-        h3 {
-            font-size: 0.9rem;
-            padding: 5px;
-        }
+    footer h3 {
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+
+    .popup {
+        padding-top: 320px;
     }
 
     .popup-content {
