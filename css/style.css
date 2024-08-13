@@ -127,6 +127,7 @@ main {
 
 .left-flex .radio-form .lbl-radio:hover {
     background-color: #ecb6b9;
+    color: white;
 }
 
 .left-flex .radio-form input[type=radio]:checked + .lbl-radio {
@@ -180,7 +181,7 @@ main {
 }
 
 .left-flex .btn-form-l {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
     margin-left: 10px;
 }
@@ -444,6 +445,24 @@ footer {
         align-items: center;
         overflow: hidden;
         margin: 0 10px;
+    }
+
+    p {
+        text-align: justify;
+        text-indent: 30px;
+        font-size: 0.9rem;
+    }
+
+    ul {
+        font-size: 0.9rem;
+    }
+    
+    .text-info {
+        text-indent: 0;
+    }
+    
+    .result-bmi-span {
+        text-indent: 0;
     }
 
     .left-flex, .right-flex {
