@@ -87,19 +87,6 @@ main {
     }
 }
 
-p {
-    text-align: justify;
-    text-indent: 30px;
-}
-
-.text-info {
-    text-indent: 0;
-}
-
-.result-bmi-span {
-    text-indent: 0;
-}
-
 .left-flex form {
     padding: 12px;
     background-color: #eee;
@@ -248,12 +235,13 @@ aside.right-flex {
 .right-flex .result-form h2 {
     text-align: center;
     margin: 0;
+    margin: 0 0 10px;
 }
 
 .right-flex .result-form h1 {
     text-align: center;
     font-size: 3rem;
-    margin: 0;
+    margin: 0 0 10px;
 }
 
 .right-flex .result-form h3 {
@@ -490,7 +478,25 @@ footer {
 @media only screen and (max-width: 480px) {
 
     .logo-header {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+    }
+
+    p {
+        text-align: justify;
+        text-indent: 30px;
+        font-size: 0.9rem;
+    }
+
+    ul {
+        font-size: 0.9rem;
+    }
+    
+    .text-info {
+        text-indent: 0;
+    }
+    
+    .result-bmi-span {
+        text-indent: 0;
     }
 
     .main-title {
@@ -544,7 +550,7 @@ footer {
     }
 
     .right-flex .result-form h1 {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
 
     .right-flex .result-form h2 {
@@ -552,7 +558,7 @@ footer {
     }
 
     .right-flex .result-form h3 {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .right-flex .btn-article-r {
