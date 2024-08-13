@@ -51,6 +51,21 @@ let sugestMid = document.querySelector(".sugest-mid");
 let sugestHigh = document.querySelector(".sugest-high");
 let sugestVeryHigh = document.querySelector(".sugest-veryhigh");
 let sugestText = document.querySelector(".sugest-text");
+let inputnumber = document.querySelector(".inputnumber");
+let inputnumber2 = document.querySelector(".inputnumber2");
+
+inputnumber.oninput = function () {
+  if (this.value.length > 3) {
+      this.value = this.value.slice(0,3); 
+  }
+}
+
+inputnumber2.oninput = function () {
+  if (this.value.length > 3) {
+      this.value = this.value.slice(0,3); 
+  }
+}
+
 
 //Mengecek apakah semua kolom di Form sdh terisi atau belum
 function calculate(){
