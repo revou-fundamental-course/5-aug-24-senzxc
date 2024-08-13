@@ -131,7 +131,6 @@ p {
 }
 
 .left-flex .radio-form input[type=radio]:checked + .lbl-radio {
-    width: 100px;
     color: white;
     background-color: #eca1a6;
     border: 1px solid #ccc;
@@ -371,7 +370,7 @@ aside.right-flex {
 
 footer {
     background-color: white;
-    padding: 20px;
+    padding: 1px;
     margin: 10px;
     border-radius: 10px;
     text-align: center;
@@ -477,9 +476,18 @@ footer {
 
 /* Untuk layar di bawah 480px (Ponsel kecil) */
 @media only screen and (max-width: 480px) {
+
+    .logo-header {
+        font-size: 1.5rem;
+    }
+
     .main-title {
         font-size: 1.5rem;
         padding: 15px;
+    }
+
+    .left-flex form {
+        margin: 0 20px;
     }
 
     .left-flex .input-form input[type=number],
@@ -487,12 +495,48 @@ footer {
         width: 100%;
     }
 
+    .radio-title {
+        display: none;
+    }
+
+    .left-flex .radio-form .lbl-radio {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .left-flex .radio-form #radio-male {
+        margin-left: 0;
+    }
+
+    .left-flex article {
+        margin: 20px;
+    }
+
+    .right-flex section {
+        margin: 20px;
+    }
+
     .right-flex .result-form h1 {
         font-size: 2rem;
+    }
+
+    .right-flex .btn-article-r {
+        line-height: 45px;
+    }
+
+    .right-flex .btn-form-r {
+        line-height: 45px;
     }
 
     .right-flex .btn-consult,
     .right-flex .btn-regis {
         width: 100%;
+    }
+
+    footer {
+        h3 {
+            font-size: 0.9rem;
+            padding: 5px;
+        }
     }
 }
