@@ -87,6 +87,9 @@ main {
     }
 }
 
+
+/* ---------- lefy Flex ------------ */
+
 .left-flex form {
     padding: 12px;
     background-color: #eee;
@@ -226,6 +229,9 @@ aside.right-flex {
     border-radius: 10px;
     background-color: white;
 }
+
+
+/* ---------- Right Flex ------------ */
 
 .right-flex .result-form {
     background-color: #eee;
@@ -368,6 +374,8 @@ aside.right-flex {
 .right-flex .sugest-form .btn-form-r {
     margin-bottom: 10px;
 }
+
+/* ---------- Footer ------------ */
 
 footer {
     background-color: white;
