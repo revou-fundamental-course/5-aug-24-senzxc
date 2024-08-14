@@ -1,193 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator BMI</title>
-    <link rel="icon" href="https://cdn.icon-icons.com/icons2/1042/PNG/512/Calculator_Icon_icon-icons.com_76430.png">
-    <link rel="stylesheet" href="css\style.css">
-</head>
-<body>
-    <div class="intro">
-        <h1 class="logo-header" >
-            <span class="logo">Kalkulator</span>&nbsp;&nbsp;<span class="logo">BMI</span><br>
-        </h1>
-    </div>
-    <header>
-        <h1 class="main-title">Kalkulator BMI</h1>
-    </header>
-    <main>
-
-        <!----------------------- LEFT FLEX -------------------------------->        
-
-        <aside class="left-flex">
-            <article>
-                <p>Temukan cara mudah dan cepat untuk memantau kesehatan Kamu dengan kalkulator BMI kami yang interaktif. Cukup masukkan data berat dan tinggi badan Kamu, dan biarkan alat canggih kami menghitung Indeks Massa Tubuh Kamu dengan akurat.</p>
-                <p>Untuk ambil langkah pertama menuju gaya hidup yang lebih sehat, yuk, hitung sekarang di kalkulator BMI berikut.</p>
-            </article>
-    
-            <form id="bmi-form">
-                <div class="radio-form">
-                    <h3 class="radio-title">Jenis Kelamin &nbsp; :</h3>
-
-                    <input type="radio" id="male" name="gender" required checked>
-                    <label class="lbl-radio" id="radio-male" for="male">Pria</label>
-
-                    <label class="lbl-slash">/</label>
-
-                    <input type="radio" id="female" name="gender" required>
-                    <label class="lbl-radio" id="radio-female" for="female">Wanita</label>
-                </div>
-    
-                <div class="input-form">
-                    <div class="input-group">
-                        <input type="number" id="height" placeholder="Masukkan Tinggi Badan" class="inputnumber" required>
-                        <span class="span-input-group">Cm</span>
-                    </div>
-                    
-                    <div class="input-group">
-                        <input type="number" id="weight" placeholder="Masukkan Berat Badan" class="inputnumber2" required>
-                        <span class="span-input-group">Kg</span>
-                    </div>
-
-                    <div class="input-group">
-                        <input type="number" id="age" placeholder="Masukkan Usia" required>
-                        <span class="span-input-group">Tahun</span>
-                    </div>
-                </div>
-    
-                <div class="btn-form-l">
-                    <button class="btn-calc" type="button" id="submit" onclick="calculate()">Hitung BMI</button>
-                    <button class="btn-rst" type="reset">Reset</button>
-                </div>
-            </form>
-    
-            <article>
-                <header>
-                    <h2>Keunggulan Fitur</h2>
-                </header>
-                
-                <ul>
-                    <li>Menghitung berat badan</li>
-                    <li>Menentukan kategori berat badan ideal atau tidak</li>
-                    <li>Mempersiapkan program penurunan berat badan</li>
-                </ul>
-                <p>Kalkulator akan memberi anda gambaran tentang perbandingan berat badan anda dengan nilai umum. Indek Massa Tubuh (atau BMI) dihitung sebagai berat badan anda (dalam kilogram) dibagi dengan kuadrat tinggi badan anda (dalam meter) atau BMI = Kg/M2.</p>
-            </article>
-        </aside>
-
-        <!----------------------- RIGHT FLEX -------------------------------->
-
-        <aside class="right-flex">
-            <section>
-                <!-- <header>
-                    <h1>Hasil</h1>
-                </header> -->
-
-                <div class="result-form">
-                    <h2>BMI kamu adalah</h2>
-                    <h1 id="result">00.00</h1>
-                    <h3 class="comment"></h3>
-
-                    <div class="btn-form-r">
-                        <button class="dl-btn-bmi">Download Hasil BMI</button>
-                    </div>
-                </div>
-                
-                <p class="text-info">Hitung BMI kamu untuk melihat hasil.</p>
-                <div class="result-article">
-                    <p class="result-bmi-span"></p>
-                    <p class="sugest-text"></p>
-                    
-                    <div class="btn-article-r">
-                        <button class="btn-consult">Konsultasi Ahli Gizi Via Aplikasi</button>
-                        <button class="btn-regis">Registrasi Online Ahli Gizi</button>
-                    </div>
-    
-                    <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang, Kamu perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Kamu terkait dengan berat badan Kamu.</p>
-    
-                    <div class="sugest-form">
-                        <div class="sugest-low">
-                            <h1>Beberapa penyakit yang mungkin terjadi:</h1>
-                            <ul>
-                                <li>Anemia</li>
-                                <li>Osteoporosis</li>
-                                <li>Masalah pada sistem kekebalan tubuh</li>
-                                <li>Kelelahan kronis</li>
-                                <li>Infertilitas</li>
-                            </ul>
-                            
-                            <div class="btn-form-r">
-                                <button class="btn-consult">Konsultasi Ahli Gizi Via Aplikasi</button>
-                                <button class="btn-regis">Registrasi Online Ahli Gizi</button>
-                            </div>
-                        </div>
-
-                        <div class="sugest-mid">
-                            <h1>Pertahankan pola hidup sehat untuk menjaga berat badan ini.</h1>
-                            
-                            <div class="btn-form-r">
-                                <button class="btn-consult">Konsultasi Ahli Gizi Via Aplikasi</button>
-                                <button class="btn-regis">Registrasi Online Ahli Gizi</button>
-                            </div>
-                        </div>
-
-                        <div class="sugest-high">
-                            <h1>Beberapa penyakit yang mungkin terjadi:</h1>
-                            <ul>
-                                <li>Kanker</li>
-                                <li>Hipertensi</li>
-                                <li>Serangan Jantung</li>
-                                <li>Osteoarthritis</li>
-                                <li>Sleep apnea</li>
-                                <li>Penyakit hati berlemak</li>
-                            </ul>
-                            
-                            <div class="btn-form-r">
-                                <button class="btn-consult">Konsultasi Ahli Gizi Via Aplikasi</button>
-                                <button class="btn-regis">Registrasi Online Ahli Gizi</button>
-                            </div>
-                        </div>
-
-                        <div class="sugest-veryhigh">
-                            <h1>Beberapa penyakit yang mungkin terjadi:</h1>
-                            <ul>
-                                <li>Penyakit jantung koroner</li>
-                                <li>Diabetes tipe 2</li>
-                                <li>Gagal jantung</li>
-                                <li>Hipertensi berat</li>
-                                <li>Masalah Pencernaan</li>
-                                <li>Gangguan pernapasan serius</li>
-                                <li>Risiko tinggi untuk berbagai jenis kanker</li>
-                            </ul>
-                            
-                            <div class="btn-form-r">
-                                <button class="btn-consult">Konsultasi Ahli Gizi Via Aplikasi</button>
-                                <button class="btn-regis">Registrasi Online Ahli Gizi</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </aside>
-
-        <div id="mypopup" class="popup">
-            <!-- popup content -->
-          <div class="popup-content">
-            <span class="close">&times;</span>
-            <p id="popupText"></p>
-          </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kalkulator BMI</title>
+        <link rel="icon" href="https://cdn.icon-icons.com/icons2/1042/PNG/512/Calculator_Icon_icon-icons.com_76430.png">
+        <link rel="stylesheet" href="css\style.css">
+    </head>
+    <body>
+        <div class="intro">
+            <h1 class="logo-header" >
+                <span class="logo">Kalkulator</span>&nbsp;&nbsp;<span class="logo">BMI</span><br>
+            </h1>
         </div>
+        <header>
+            <h1 class="main-title">Kalkulator BMI</h1>
+        </header>
+        <main>
 
-    </main>
+            <!----------------------- LEFT FLEX -------------------------------->        
 
-    <!----------------------- FOOTER -------------------------------->
-    
-    <footer>
-        <h3>&copy 2024 by Deva Satrio &nbsp; || &nbsp made with &#10084;</h3>
-    </footer>
+            <aside class="left-flex">
+                <article>
+                    <p>Temukan cara mudah dan cepat untuk memantau kesehatan Kamu dengan kalkulator BMI kami yang interaktif. Cukup masukkan data berat dan tinggi badan Kamu, dan biarkan alat canggih kami menghitung Indeks Massa Tubuh Kamu dengan akurat.</p>
+                    <p>Untuk ambil langkah pertama menuju gaya hidup yang lebih sehat, yuk, hitung sekarang di kalkulator BMI berikut.</p>
+                </article>
+        
+                <form id="bmi-form">
+                    <div class="radio-form">
+                        <h3 class="radio-title">Jenis Kelamin &nbsp; :</h3>
 
-    <script src="js/script.js"></script>
+                        <input type="radio" id="male" name="gender" required checked>
+                        <label class="lbl-radio" id="radio-male" for="male">Pria</label>
 
-</body>
+                        <label class="lbl-slash">/</label>
+
+                        <input type="radio" id="female" name="gender" required>
+                        <label class="lbl-radio" id="radio-female" for="female">Wanita</label>
+                    </div>
+        
+                    <div class="input-form">
+                        <div class="input-group">
+                            <input type="number" id="height" placeholder="Masukkan Tinggi Badan" class="inputnumber" required>
+                            <span class="span-input-group">Cm</span>
+                        </div>
+                        
+                        <div class="input-group">
+                            <input type="number" id="weight" placeholder="Masukkan Berat Badan" class="inputnumber2" required>
+                            <span class="span-input-group">Kg</span>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="number" id="age" placeholder="Masukkan Usia" required>
+                            <span class="span-input-group">Tahun</span>
+                        </div>
+                    </div>
+        
+                    <div class="btn-form-l">
+                        <button class="btn-calc" type="button" id="submit" onclick="calculate()">Hitung BMI</button>
+                        <button class="btn-rst" type="reset">Reset</button>
+                    </div>
+                </form>
+        
+                <article>
+                    <header>
+                        <h2>Keunggulan Fitur</h2>
+                    </header>
+                    
+                    <ul>
+                        <li>Menghitung berat badan</li>
+                        <li>Menentukan kategori berat badan ideal atau tidak</li>
+                        <li>Mempersiapkan program penurunan berat badan</li>
+                    </ul>
+                    <p>Kalkulator akan memberi anda gambaran tentang perbandingan berat badan anda dengan nilai umum. Indek Massa Tubuh (atau BMI) dihitung sebagai berat badan anda (dalam kilogram) dibagi dengan kuadrat tinggi badan anda (dalam meter) atau BMI = Kg/M2.</p>
+                </article>
+            </aside>
+            <!----------------------- END LEFT FLEX -------------------------------->
+
+            <!----------------------- RIGHT FLEX -------------------------------->
+            <aside class="right-flex">
+                <section>
+                    <div class="result-form">
+                        <h2>BMI kamu adalah</h2>
+                        <h1 id="result">00.00</h1>
+                        <h3 class="comment"></h3>
+
+                        <div class="btn-form-r">
+                            <button class="dl-btn-bmi">Download Hasil BMI</button>
+                        </div>
+                    </div>
+                    
+                    <p class="text-info">Hitung BMI kamu untuk melihat hasil.</p>
+                    <div class="result-article">
+                        <p class="result-bmi-span"></p>
+                        <p class="sugest-text"></p>
+                        
+                        <div class="btn-article-r">
+                            <button class="btn-consult">Konsultasi Ahli Gizi Via Aplikasi</button>
+                            <button class="btn-regis">Registrasi Online Ahli Gizi</button>
+                        </div>
+        
+                        <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang, Kamu perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Kamu terkait dengan berat badan Kamu.</p>
+        
+                        <div class="sugest-form">
+                            <div class="sugest-low">
+                                <h1>Beberapa penyakit yang mungkin terjadi:</h1>
+                                <ul>
+                                    <li>Anemia</li>
+                                    <li>Osteoporosis</li>
+                                    <li>Masalah pada sistem kekebalan tubuh</li>
+                                    <li>Kelelahan kronis</li>
+                                    <li>Infertilitas</li>
+                                </ul>
+                                
+                                <div class="btn-form-r">
+                                    <button class="btn-consult">Konsultasi Ahli Gizi Via Aplikasi</button>
+                                    <button class="btn-regis">Registrasi Online Ahli Gizi</button>
+                                </div>
+                            </div>
+
+                            <div class="sugest-mid">
+                                <h1>Pertahankan pola hidup sehat untuk menjaga berat badan ini.</h1>
+                                
+                                <div class="btn-form-r">
+                                    <button class="btn-consult">Konsultasi Ahli Gizi Via Aplikasi</button>
+                                    <button class="btn-regis">Registrasi Online Ahli Gizi</button>
+                                </div>
+                            </div>
+
+                            <div class="sugest-high">
+                                <h1>Beberapa penyakit yang mungkin terjadi:</h1>
+                                <ul>
+                                    <li>Kanker</li>
+                                    <li>Hipertensi</li>
+                                    <li>Serangan Jantung</li>
+                                    <li>Osteoarthritis</li>
+                                    <li>Sleep apnea</li>
+                                    <li>Penyakit hati berlemak</li>
+                                </ul>
+                                
+                                <div class="btn-form-r">
+                                    <button class="btn-consult">Konsultasi Ahli Gizi Via Aplikasi</button>
+                                    <button class="btn-regis">Registrasi Online Ahli Gizi</button>
+                                </div>
+                            </div>
+
+                            <div class="sugest-veryhigh">
+                                <h1>Beberapa penyakit yang mungkin terjadi:</h1>
+                                <ul>
+                                    <li>Penyakit jantung koroner</li>
+                                    <li>Diabetes tipe 2</li>
+                                    <li>Gagal jantung</li>
+                                    <li>Hipertensi berat</li>
+                                    <li>Masalah Pencernaan</li>
+                                    <li>Gangguan pernapasan serius</li>
+                                    <li>Risiko tinggi untuk berbagai jenis kanker</li>
+                                </ul>
+                                
+                                <div class="btn-form-r">
+                                    <button class="btn-consult">Konsultasi Ahli Gizi Via Aplikasi</button>
+                                    <button class="btn-regis">Registrasi Online Ahli Gizi</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+            <!----------------------- END RIGHT FLEX -------------------------------->
+
+
+            <!----------------------- POPUP -------------------------------->
+            <div id="mypopup" class="popup">
+                <!-- popup content -->
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <p id="popupText"></p>
+            </div>
+            </div>
+            <!--------------------- END POPUP ------------------------------>
+        </main>
+
+        <!----------------------- FOOTER -------------------------------->
+        
+        <footer>
+            <h3>&copy 2024 by senzxc</h3>
+        </footer>
+
+        <!--------------------- END FOOTER ---------------------------->
+
+        <script src="js/script.js"></script>
+
+    </body>
 </html>
