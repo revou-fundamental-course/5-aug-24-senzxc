@@ -5,9 +5,13 @@
     font-family: "Poppins", sans-serif;
 }
 
-html {
+/* html {
     scrollbar-gutter: stable both-edges;
     scrollbar-color: rgb(236, 161, 166) rgb(243, 244, 246);
+} */
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 body {
